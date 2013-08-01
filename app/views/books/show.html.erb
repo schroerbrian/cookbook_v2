@@ -36,7 +36,13 @@
   <% end %>
 </div>
 
-<%= link_to "Add a Comment", new_comment_path(book_id: @book.id) %>
+<%= link_to "Add a Comment", new_comment_path(book_id: @book.id), 
+:remote => true %>  <%#this tells rails that if this is clicked turn it
+into ajax. 'remote' stands in for ajax. sets up a listener, writes a callback
+this is all we need to do in view/UI, in addition to creating a div
+that will appear when it's clicked #%>
+
+<div id="new_comment" />
 
 <hr>
 

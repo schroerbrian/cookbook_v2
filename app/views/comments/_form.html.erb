@@ -1,0 +1,8 @@
+<%# :remote => true also sets up ajax call here %>
+
+<%= form_for @comment, :remote => true do |f| %>  
+<%= f.text_field :name, :autofocus => true %>
+  <%= f.text_field :body %>
+  <%= f.hidden_field :book_id %>
+  <%= f.submit class: "btn btn-primary btn-small" %>
+<% end %>

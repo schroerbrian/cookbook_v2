@@ -24,9 +24,17 @@ class User < ActiveRecord::Base
   validates :password, presence: true, length: { minimum: 6 }
   validates :password_confirmation, presence: true
 
+  # def send_password_reset
+  #   self.remember_token
+  #   UserMailer.reset_password_email
+    
+
+
     private
 
     def create_remember_token
       self.remember_token = SecureRandom.urlsafe_base64
     end
+
+
 end

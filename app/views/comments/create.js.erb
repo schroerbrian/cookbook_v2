@@ -1,0 +1,11 @@
+var new_row = $('<%=j(render(:partial=>"row"))%>'); 
+
+$('.new_comment').hide();
+$('.comment_container').append(new_row);
+
+//new comment becomes a class here because the form becomes rendered as a 
+//class in the DOM for some astrange reason
+
+//'j' function in rails: 'j' is short for javascript tag;
+//this turns the form into a javascript string for js to
+//understand.

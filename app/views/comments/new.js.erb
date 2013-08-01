@@ -1,0 +1,7 @@
+var comment_form = $('<%=j(render(:partial=>"form"))%>'); 
+
+//'j' function in rails: 'j' is short for javascript tag;
+//this turns the form into a javascript string for js to
+//understand.
+
+$('#new_comment').html(comment_form);
